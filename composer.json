@@ -1,0 +1,19 @@
+{
+    "name": "buscacep/yyhago",
+    "description": "BuscaCep",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yhago Felipe",
+            "email": "yhago.felipe.teles@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "BuscaCep\\": "src/"
+        }
+    }
+}
