@@ -33,6 +33,18 @@ class ComposerAutoloaderInitecad1b1f418e162404722dfc3374f0a0
 
         $loader->register(true);
 
+        $filesToLoad = \Composer\Autoload\ComposerStaticInitecad1b1f418e162404722dfc3374f0a0::$files;
+        $requireFile = \Closure::bind(static function ($fileIdentifier, $file) {
+            if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
+                $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
+
+                require $file;
+            }
+        }, null, null);
+        foreach ($filesToLoad as $fileIdentifier => $file) {
+            $requireFile($fileIdentifier, $file);
+        }
+
         return $loader;
     }
 }
